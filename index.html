@@ -1,0 +1,464 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>P5 - Thrifting</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/aos.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("is_dark");
+        }
+        if (localStorage.getItem("theme-color") === "light") {
+            document.documentElement.classList.remove("is_dark");
+        } 
+    </script>
+
+</head>
+
+
+<body class="body__wrapper">
+    <!-- pre loader area start -->
+    <div id="back__preloader">
+        <div id="back__circle_loader"></div>
+        <div class="back__loader_logo">
+            <img loading="lazy" src="img/pre.png" alt="Preload">
+        </div>
+    </div>
+    <!-- pre loader area end -->
+
+
+    <!-- Dark/Light area start -->
+    <div class="mode_switcher my_switcher">
+        <button id="light--to-dark-button" class="light align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon dark__mode" viewBox="0 0 512 512">
+                <path
+                    d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
+                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="32" />
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon light__mode" viewBox="0 0 512 512">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"
+                    d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94" />
+                <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-miterlimit="10" stroke-width="32" />
+            </svg>
+
+            <span class="light__mode">Light</span>
+            <span class="dark__mode">Dark</span>
+        </button>
+    </div>
+    <!-- Dark/Light area end -->
+
+
+
+    <main class="main_wrapper overflow-hidden ">
+
+
+        <!-- Featured Collection area -->
+        <section class="featured__collection sp_top_120 sp_bottom_120" id="featured__collection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section__title text-center sp_bottom_50" data-aos="fade-up"
+                            data-aos-duration="1800">
+                            <div class="section__title__button">
+                                <span class="text__gradient">Produk Kami</span>
+                            </div>
+                            <div class="section__title__heading">
+                                <h3>MENJUAL PAKAIAN IMPORT</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row__custom__class position-relative" data-aos="fade-up" data-aos-duration="2200">
+
+                    <div class="team__slider__active swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- single product start 1-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 column__custom__class swiper-slide">
+                                <div class="gridarea__wraper product__grid">
+                                    <div class="gridarea__img">
+                                        <a href="https://wa.me/6285888866376"><img loading="lazy"
+                                                src="img/products/p.png" alt="grid"></a>
+
+                                        <div class="product__grid__action">
+                                            <ul>
+                                                <li>
+                                                    <a class="grid__cart" href="https://wa.me/6285888866376"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                        tabindex="0" data-bs-original-title="Add to cart">
+                                                        Beli Sekarang
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="gridarea__content">
+
+                                        <div class="gridarea__heading">
+                                            <h3><a href="https://wa.me/6285888866376">Yankees Oren</a></h3>
+                                        </div>
+                                        <div class="gridarea__price">
+                                            RP 70.000
+                                        </div>
+                                        <div class="gridarea__bottom">
+
+                                            <a href="https://wa.me/6285888866376">
+                                                Rating
+                                            </a>
+
+                                            <div class="gridarea__star">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <span>(96)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single product end -->
+                            <!-- single product start 2-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 column__custom__class swiper-slide">
+                                <div class="gridarea__wraper product__grid">
+                                    <div class="gridarea__img">
+                                        <a href="https://wa.me/6285888866376"><img loading="lazy"
+                                                src="img/products/p1.png" alt="grid"></a>
+
+                                        <div class="product__grid__action">
+                                            <ul>
+                                                <li>
+                                                    <a class="grid__cart" href="https://wa.me/6285888866376"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                        tabindex="0" data-bs-original-title="Add to cart">
+                                                        Beli Sekarang
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="gridarea__content">
+
+                                        <div class="gridarea__heading">
+                                            <h3><a href="https://wa.me/6285888866376">Yankees Hitam</a></h3>
+                                        </div>
+                                        <div class="gridarea__price">
+                                            RP 66.000
+                                        </div>
+                                        <div class="gridarea__bottom">
+
+                                            <a href="https://wa.me/6285888866376">
+                                                Rating
+                                            </a>
+
+                                            <div class="gridarea__star">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <span>(95)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single product end -->
+                            <!-- single product start 3-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 column__custom__class swiper-slide">
+                                <div class="gridarea__wraper product__grid">
+                                    <div class="gridarea__img">
+                                        <a href="https://wa.me/6285888866376"><img loading="lazy"
+                                                src="img/products/p2.png" alt="grid"></a>
+
+                                        <div class="product__grid__action">
+                                            <ul>
+                                                <li>
+                                                    <a class="grid__cart" href="https://wa.me/6285888866376"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                        tabindex="0" data-bs-original-title="Add to cart">
+                                                        Beli Sekarang
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="gridarea__content">
+
+                                        <div class="gridarea__heading">
+                                            <h3><a href="https://wa.me/6285888866376">Dickies</a></h3>
+                                        </div>
+                                        <div class="gridarea__price">
+                                            RP 57.000
+                                        </div>
+                                        <div class="gridarea__bottom">
+
+                                            <a href="https://wa.me/6285888866376">
+                                                Rating
+                                            </a>
+
+                                            <div class="gridarea__star">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <span>(99)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single product end -->
+                            <!-- single product start 4-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 column__custom__class swiper-slide">
+                                <div class="gridarea__wraper product__grid">
+                                    <div class="gridarea__img">
+                                        <a href="https://wa.me/6285888866376"><img loading="lazy"
+                                                src="img/products/p4.png" alt="grid"></a>
+
+                                        <div class="product__grid__action">
+                                            <ul>
+                                                <li>
+                                                    <a class="grid__cart" href="https://wa.me/6285888866376"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                        tabindex="0" data-bs-original-title="Add to cart">
+                                                        Beli Sekarang
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="gridarea__content">
+
+                                        <div class="gridarea__heading">
+                                            <h3><a href="https://wa.me/6285888866376">Dodger</a></h3>
+                                        </div>
+                                        <div class="gridarea__price">
+                                            RP 56.000
+                                        </div>
+                                        <div class="gridarea__bottom">
+
+                                            <a href="https://wa.me/6285888866376">
+                                                Rating
+                                            </a>
+
+                                            <div class="gridarea__star">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <span>(98)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single product end -->
+                            <!-- single product start 5-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 column__custom__class swiper-slide">
+                                <div class="gridarea__wraper product__grid">
+                                    <div class="gridarea__img">
+                                        <a href="https://wa.me/6285888866376"><img loading="lazy"
+                                                src="img/products/p5.png" alt="grid"></a>
+
+                                        <div class="product__grid__action">
+                                            <ul>
+                                                <li>
+                                                    <a class="grid__cart" href="https://wa.me/6285888866376"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                                        tabindex="0" data-bs-original-title="Add to cart">
+                                                        Beli Sekarang
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="gridarea__content">
+
+                                        <div class="gridarea__heading">
+                                            <h3><a href="https://wa.me/6285888866376">CrocodileF</a></h3>
+                                        </div>
+                                        <div class="gridarea__price">
+                                            RP 55.000
+                                        </div>
+                                        <div class="gridarea__bottom">
+
+                                            <a href="https://wa.me/6285888866376">
+                                                Rating
+                                            </a>
+
+                                            <div class="gridarea__star">
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <i class="icofont-star"></i>
+                                                <span>(97)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single product end -->
+
+
+                        </div>
+                    </div>
+
+                    <div class="slider__controls__wrap slider__controls__pagination slider__controls__arrows">
+                        <div class="swiper-button-next arrow-btn arrow-btn-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4297 5.92999L20.4997 12L14.4297 18.07" stroke="#fff" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.5 12H20.33" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                        <div class="swiper-button-prev arrow-btn arrow-btn-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.57031 5.92999L3.50031 12L9.57031 18.07" stroke="#fff" stroke-width="1.5"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20.5 12H3.67" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Featured Collection area -->
+
+        <!-- features-area -->
+        <section class="service__features sp_bottom_140" id="tb__service">
+            <div class="container">
+                <div class="service__features__wrap">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1800">
+                            <div class="service__features__item">
+
+                                <div class="service__features__icon">
+                                    <img src="img/about/delivery.png" alt="">
+                                </div>
+                                <div class="service__features__content">
+                                    <h4 class="service__name">Pengiriman</h4>
+                                    <p>Gratis ongkir untuk semua pesanan tanpa minimal pembelian.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2200">
+                            <div class="service__features__item">
+                                <div class="service__features__icon">
+                                    <img src="img/about/secure.png" alt="">
+                                </div>
+                                <div class="service__features__content">
+                                    <h4 class="service__name">Keamanan</h4>
+                                    <p>Barang anda di jamin aman.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="2600">
+                            <div class="service__features__item">
+                                <div class="service__features__icon">
+                                    <img src="img/about/support.png" alt="">
+                                </div>
+                                <div class="service__features__content">
+                                    <h4 class="service__name">Dukungan</h4>
+                                    <p>Dapatkan dukungan untuk semua kebutuhan dan pertanyaan Anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- features-area-end -->
+
+        <!-- copyright__section__start -->
+        <div class="copyright copyright--4">
+            <div class="container">
+                <div class="row row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="copyright__left copyright__left--2">
+                            <p>Copyright © 2024 <a style="color: aqua;" href="https://github.com/nullablenone">nullablenone. </a>
+                                All Right Reserved</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- copyright__section__end -->
+
+
+
+    </main>
+
+
+
+
+
+    <!-- JS here -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.getElementById("light--to-dark-button")?.classList.add("dark--mode");
+        }
+        if (localStorage.getItem("theme-color") === "light") {
+            document.getElementById("light--to-dark-button")?.classList.remove("dark--mode");
+        } 
+    </script>
+
+</body>
+
+</html>
